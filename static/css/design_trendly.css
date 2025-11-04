@@ -10,11 +10,11 @@
     --radius-xl: 20px;
 
     /* ======= SPACING ======= */
-    --space-xs: 4px;
-    --space-sm: 8px;
-    --space-md: 12px;
-    --space-lg: 16px;
-    --space-xl: 24px;
+    --space-xs: 6px;
+    --space-sm: 10px;
+    --space-md: 16px;
+    --space-lg: 22px;
+    --space-xl: 32px;
 }
 
 /* ===================================
@@ -54,12 +54,14 @@
     /* ======= SEMANTIC COLORS ======= */
     --success: #28a161;
     --error: #d64f45;
-    --message: #d9f2e3; /* light mint-emerald */
+    --message: #d9f2e3;
+    /* light mint-emerald */
     --shadow: #9cc4ae;
     --hollow: #a4aaa8;
 
     /* ======= EFFECTS ======= */
-    --bg-shadow: 22, 23, 25; /* RGB base for overlay transparency */
+    --bg-shadow: 22, 23, 25;
+    /* RGB base for overlay transparency */
 }
 
 /* ===================================
@@ -99,7 +101,8 @@
     /* ======= SEMANTIC COLORS ======= */
     --success: #2ba46a;
     --error: #e05b52;
-    --message: #223a2f; /* deep emerald glow */
+    --message: #223a2f;
+    /* deep emerald glow */
     --shadow: #1b3025;
     --hollow: #4c514e;
 
