@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Trendly</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta name="color-scheme" content="light dark">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- LOCAL STYLESHEETS -->
+    <link rel="stylesheet" href="{% static 'css/colors_trendly.css' %}?v={{ STATIC_VERSION }}" />
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}?v={{ STATIC_VERSION }}" />
+    <link rel="stylesheet" href="{% static 'css/global.css' %}?v={{ STATIC_VERSION }}">
+    <link rel="stylesheet" href="{% static 'css/icons.css' %}?v={{ STATIC_VERSION }}" />
+    <link rel="stylesheet" href="{% static 'users/css/users.css' %}" />
+
+    <!-- LOCAL SCRIPTS -->
+    <script src="{% static 'js/navigation.js' %}?v={{ STATIC_VERSION }}" defer type="module"></script>
+    <script src="{% static 'js/helpers.js' %}?v={{ STATIC_VERSION }}" defer type="module"></script>
+
+    <script>
+        (() => {
+            const storedTheme = localStorage.getItem("theme");
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            const theme = storedTheme || (prefersDark ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+
+    {% block head %}{% endblock %}
+</head>
+
+<body data-user="{{ request.user.id|default:'guest' }}">
+    <header>
+        <div class="navbar-container">
+            <div class="navbar">
+                <div class="brand">
+                    <h1><a class="noselect" href="/">Trendly</a></h1>
+                </div>
+                <nav>
+                    <a class="noselect" href="{% url 'analytics:dashboard' %}">Dashboard</a>
+                    <a class="noselect" href="#">Workshop</a>
+                    <a class="noselect" href="##">Backtest</a>
+                </nav>
+            </div>
+            <div class="settings">
+                <div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" class="theme-input toggle-input" name="theme" value="dark">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span class="toggle-label theme-label">Dark Mode</span>
+                </div>
+                <div>
+                    {% if user.is_authenticated %}
+                    <div class="profile-container">
+                        <input type="button" id="profile" class="noselect profile"
+                            value="{{ user.username | slice:':1' | upper }}">
+                    </div>
+                    {% else %}
+                    <a href="{% url 'users:login' %}" class="noselect cta login">Log In</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFILE CONTAINER (TO LOG OUT)-->
+        <div class="overlay logout-container pop-up noselect">
+            <form action="{% url 'users:logout' %}" method="POST">
+                {% csrf_token %}
+                <h4>{{ user.username }}</h4>
+                <button class="cta" id="Logout" name="logout">Logout</button>
+            </form>
+        </div>
+        {% block header %}
+        {% endblock %}
+
+    </header>
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+    </div>
+    <div id="overlay-backdrop"></div>
+</body>
+
+</html>

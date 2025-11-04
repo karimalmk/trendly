@@ -1,0 +1,12 @@
+/* ==============================
+   WELCOME SECTION
+============================== */
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-container h1 {
+    margin-bottom: 1rem;
+}

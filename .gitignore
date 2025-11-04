@@ -1,0 +1,84 @@
+# ==========================================
+# Python / Django cache + temp files
+# ==========================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.eggs/
+*.so
+
+# ==========================================
+# Django-specific files
+# ==========================================
+# SQLite database (local dev)
+db.sqlite3
+*.sqlite3
+
+# Migrations (you can uncomment if you regenerate often)
+# */migrations/
+# */migrations/*.pyc
+
+# Media and static files
+/media/
+staticfiles/
+static_root/
+collectstatic/
+
+# Django local settings / secrets
+.env
+local_settings.py
+
+# ==========================================
+# Virtual environments
+# ==========================================
+.env/
+.venv/
+env/
+venv/
+
+# ==========================================
+# Logs / cache / temp
+# ==========================================
+*.log
+*.pot
+*.pyc
+tmp/
+cache/
+*.pid
+*.seed
+
+# ==========================================
+# IDE / Editor configs
+# ==========================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# OS-specific junk
+# ==========================================
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Front-end / Node (if using npm or webpack)
+# ==========================================
+node_modules/
+npm-debug.log*
+.cache/
+dist/
+build/
+
+
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# ==========================================
+# Runserver script files
+# ==========================================
+runserver.sh

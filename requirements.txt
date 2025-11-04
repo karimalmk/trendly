@@ -1,0 +1,6 @@
+django
+yfinance
+pandas
+numpy
+matplotlib
+werkzeug

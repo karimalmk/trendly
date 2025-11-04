@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'users/css/users.css' %}" />
+<title> Register </title>
+{% endblock %}
+
+{% block main %}
+<div class="register-container">
+    <h1 id="title">Welcome to Trendly!</h1>
+    <div class="register-box">
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+        <form action="{% url 'users:register' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password1" placeholder="Password" required>
+            <input type="password" name="password2" placeholder="Confirm Password" required>
+            <input type="submit" value="Register">
+        </form>
+        <p>Already registered? <a href="{% url 'users:login' %}">Login here.</a></p>
+    </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+&copy; 2025 Trendly. All rights reserved.
+{% endblock %}

@@ -1,0 +1,103 @@
+/* ===================================
+   CUSTOM OVERLAYS
+=================================== */
+
+/* Positioning */
+.settings-container {
+    top: 74px;
+    right: 40px;
+}
+
+.edit-watchlist-container {
+    top: 120px;
+    right: 200px;
+}
+
+.delete-watchlist-confirm {
+    top: 120px;
+    right: 200px;
+}
+
+.delete-watchlist-table {
+    top: 200px;
+    right: 500px;
+}
+
+
+/* Center button-group when needed */
+.delete-watchlist-confirm>.button-group,
+.delete-watchlist-table>.button-group {
+    align-self: center;
+}
+
+.edit-stock {
+    position: absolute;
+}
+
+/* ===================================
+   CUSTOM BUTTONS
+=================================== */
+
+#rename-input {
+    color: var(--text-main);
+    font-weight: normal;
+}
+
+.delete-watchlist-confirm button,
+.delete-watchlist-table button {
+    padding: 8px 16px;
+    width: auto;
+    margin: 8px;
+}
+
+/* ===================================
+   WATCHLIST STYLES
+=================================== */
+
+.watchlist-options,
+.watchlist-options input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    cursor: pointer;
+}
+
+.watchlist-options input:hover {
+    background-color: var(--accent);
+    color: var(--text-inverted);
+}
+
+.active-button {
+    color: var(--accent-dark);
+    background-color: transparent;
+    /* overrides hover */
+}
+
+.watchlist-names {
+    padding-top: 12px;
+    padding-left: 18px;
+}
+
+
+#watchlist-name button,
+#watchlist-name input {
+    font-size: 1.25rem;
+}
+
+#meta-data {
+    font-size: 0.8rem;
+}
+
+.watchlist-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.delete-watchlist-confirm .button-group,
+.delete-watchlist-table .button-group {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+}

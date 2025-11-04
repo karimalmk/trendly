@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block head %}
+<title> Welcome </title>
+<link rel="stylesheet" href="{% static 'analytics/css/index.css' %}" />
+{% endblock %}
+
+{% block main %}
+<section class="row">
+    <div class="col-6">
+        <h2>Welcome to Trendly</h2>
+        <p>
+            Your all-in-one portfolio analytics and watchlist manager — built to help you
+            track, compare, and understand market trends in real time.
+        </p>
+        <p class="blinking-text"> Invest smarter today, with Trendly.</p>
+    </div>
+</section>
+
+<!-- ===============================
+       FEATURE CARDS
+  =============================== -->
+<section class="row">
+    <div class="col-4">
+        <div class="card">
+            <h3>📈 Watchlists</h3>
+            <p>
+                Create and organize your personalized watchlists with smooth CRUD controls
+                and cached price data for fast, responsive updates.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+            <h3>📊 Portfolio Analytics</h3>
+            <p>
+                Track performance, visualize asset composition, and backtest strategies — all powered by Django and
+                Python analytics.
+            </p>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+            <h3>⚙️ Smart UI</h3>
+            <p>
+                Seamless dark/light themes, persistent navigation, and elegant overlay interactions for an immersive
+                experience.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ===============================
+       ABOUT CREATOR
+  =============================== -->
+<section class="row">
+    <div class="col-8">
+        <div class="card">
+            <h3>👋 Meet the Creator</h3>
+            <p>
+                Hi, I’m <strong>Karim Al-Moukhtar</strong> — the developer and designer behind Trendly.
+                I built this platform to merge my passions for <strong>finance, data, and software</strong> into a
+                clean, fast, and analytical web experience.
+            </p>
+            <p>
+                Trendly reflects my belief that analytics tools should be both
+                <strong>powerful and beautiful</strong> — blending rigorous data with intuitive design.
+            </p>
+            <div class="button-group">
+                <a href="https://github.com/karimalmk" class="cta" target="_blank">View GitHub</a>
+                <a href="https://www.linkedin.com/in/karim-al-moukhtar/" class="cta" target="_blank">Connect on Linkedin</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+            <h3>💡 Tech Stack</h3>
+            <div class="stack">
+                <div class="pill">Django</div>
+                <div class="pill">JavaScript</div>
+                <div class="pill">Python</div>
+                <div class="pill">CSS Grid</div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
