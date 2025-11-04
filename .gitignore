@@ -16,10 +16,6 @@ __pycache__/
 db.sqlite3
 *.sqlite3
 
-# Migrations (you can uncomment if you regenerate often)
-# */migrations/
-# */migrations/*.pyc
-
 # Media and static files
 /media/
 staticfiles/
@@ -39,46 +35,13 @@ env/
 venv/
 
 # ==========================================
-# Logs / cache / temp
-# ==========================================
-*.log
-*.pot
-*.pyc
-tmp/
-cache/
-*.pid
-*.seed
-
-# ==========================================
-# IDE / Editor configs
-# ==========================================
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# ==========================================
 # OS-specific junk
 # ==========================================
 .DS_Store
 Thumbs.db
 
 # ==========================================
-# Front-end / Node (if using npm or webpack)
-# ==========================================
-node_modules/
-npm-debug.log*
-.cache/
-dist/
-build/
-
-
-.pytest_cache/
-.coverage
-coverage.xml
-htmlcov/
-
-# ==========================================
-# Runserver script files
+# Custom files/scripts
 # ==========================================
 runserver.sh
+notes.md
