@@ -1,8 +1,10 @@
 /* ===================================
    GLOBAL VARIABLES
 =================================== */
-:root {
+:root[data-theme="light"],
+:root[data-theme="dark"] {
     /* ======= RADII ======= */
+    --radius-none: 0;
     --radius-xs: 3px;
     --radius-sm: 6px;
     --radius-md: 9px;
@@ -10,11 +12,11 @@
     --radius-xl: 20px;
 
     /* ======= SPACING ======= */
-    --space-xs: 6px;
-    --space-sm: 10px;
-    --space-md: 16px;
-    --space-lg: 22px;
-    --space-xl: 32px;
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 12px;
+    --space-lg: 16px;
+    --space-xl: 24px;
 }
 
 /* ===================================

@@ -1,4 +1,4 @@
-import { formatUSD, formatPercent, formatIntegerComma, setCoordinates } from "../../../../static/js/helpers.js";
+import { formatUSD, formatPercent, formatIntegerComma, setCoordinates } from "./helpers.js";
 import { handleOverlay } from "../../../../static/js/navigation.js";
 import {
     fetchWatchlists, fetchWatchlistData, fetchCreateWatchlist, fetchDeleteWatchlist, fetchRenameWatchlist,

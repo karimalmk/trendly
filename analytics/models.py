@@ -43,3 +43,5 @@ class WatchlistStock(models.Model):
         constraints = [
             models.UniqueConstraint(fields=['watchlist', 'stock'], name='unique_watchlist_stock')
         ]
+
+# class Portfolio(models.Model):

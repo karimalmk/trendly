@@ -1,5 +1,5 @@
 
-import { getCookie } from "../../../../static/js/helpers.js";
+import { getCookie } from "./helpers.js";
 
 // ============================================================
 // WATCHLISTS API

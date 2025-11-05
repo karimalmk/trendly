@@ -5,8 +5,9 @@ import plotly.io as pio
 
 
 from .quotes_api import get_historic_data
-from ...helpers.setup import get_db, close_db
 from .portfolio_metrics import get_portfolio
+
+from ..models import Portfolio
 
 # ==========================================================================
 # Display Individual Stock Prices

@@ -1,4 +1,4 @@
-from trendly.analytics.utils.portfolio_metrics import get_portfolio
+from analytics.utils.portfolio_metrics import get_portfolio
 
 # fixed allocations is a dictionary which only contains information if rebalancing is selected
 
