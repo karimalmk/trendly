@@ -1,0 +1,75 @@
+.register-container,
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 33%;
+}
+
+.register-box,
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-mid);
+    border-top: 8px solid var(--accent);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.register-box form,
+.login-box form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-box input,
+.login-box input {
+    width: 80%;
+    margin: var(--space-sm) 0;
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+}
+
+.register-box input[type="submit"],
+.login-box input[type="submit"] {
+    margin-top: var(--space-md);
+    background: var(--accent);
+    color: var(--text-inverted);
+    border: 1px solid var(--accent-dark);
+}
+
+.profile {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    font-weight: 600;
+    background: var(--hollow);
+    color: var(--text-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logout-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-mid);
+    padding: var(--space-lg);
+}
+
+#title {
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
