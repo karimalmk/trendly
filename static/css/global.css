@@ -31,6 +31,10 @@ html {
    BASE LAYOUT
 =================================== */
 
+/* ===================================
+   BASE LAYOUT
+=================================== */
+
 html,
 body {
     height: 100%;
@@ -45,6 +49,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: var(--bg-dark);
+
 }
 
 /* Debug Outlines */
@@ -59,8 +65,8 @@ header {
 }
 
 main {
-    background: var(--bg-dark);
     padding: 8px 16px;
+    display: flex;
     flex: 1;
 }
 
