@@ -111,13 +111,3 @@ trendly/
 ```
 
 ---
-
-## Notes
-
-* Ensure Redis is running if using cached endpoints.
-* The shared static system allows you to reuse the same design set across multiple Django apps.
-* Frontend JS modules (e.g., `helpers.js`, `watchlist_api.js`) should be imported through your templates.
-
----
-
-If you want, I can add badges, images, a contribution guide, or expand the documentation for APIs, models, and JS architecture.
