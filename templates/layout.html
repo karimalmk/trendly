@@ -15,16 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <!-- LOCAL STYLESHEETS -->
-    <link rel="stylesheet" href="{% static 'css/design_trendly.css' %}?v={{ STATIC_VERSION }}" />
-
-
-    <!-- LOCAL SCRIPTS -->
-    <script src="{% static 'js/navigation.js' %}?v={{ STATIC_VERSION }}" defer type="module"></script>
+    <!-- SCRIPTS -->
+    <script src="{% static 'js/nav.js' %}?v={{ STATIC_VERSION }}" defer type="module"></script>
     <script src="{% static 'analytics/js/helpers.js' %}?v={{ STATIC_VERSION }}" defer type="module"></script>
 
 
-    <!-- GLOBAL STYLESHEETS -->
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="{% static 'css/design.css' %}?v={{ STATIC_VERSION }}" />
     <link rel="stylesheet" href="{% static 'css/custom.css' %}?v={{ STATIC_VERSION }}" />
     <link rel="stylesheet" href="{% static 'css/global.css' %}?v={{ STATIC_VERSION }}">
     <link rel="stylesheet" href="{% static 'css/icons.css' %}?v={{ STATIC_VERSION }}" />

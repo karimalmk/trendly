@@ -31,54 +31,52 @@ html {
    BASE LAYOUT
 =================================== */
 
-/* ===================================
-   BASE LAYOUT
-=================================== */
-
+/* Smooth color/theme transition */
 html,
 body {
-    height: 100%;
-    margin: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Debug Outlines (optional for development) */
+* {
+    outline: 0px solid rgba(255, 0, 0, 0.4);
+}
+
+/* Body Base */
 body {
     font-family: var(--font-sans);
     font-weight: 500;
     color: var(--text-main);
+    margin: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background: var(--bg-dark);
-
-}
-
-/* Debug Outlines */
-* {
-    outline: 0px solid rgba(255, 0, 0, 0.4);
 }
 
 /* Header, Main, Footer */
 header {
     border-bottom: 1px solid var(--border-light);
     background: var(--bg-mid);
+    padding: var(--space-sm) var(--space-lg);
 }
 
 main {
-    padding: 8px 16px;
-    display: flex;
     flex: 1;
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--bg-dark);
+    overflow-y: hidden;
 }
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     text-align: center;
     color: var(--text-subtle);
     font-size: 0.8rem;
-    height: 8%;
-    padding: 32px 8px 16px 8px;
+    height: 10%;
+    padding: var(--space-sm) var(--space-lg);
 }
 
 /* ===================================
@@ -145,8 +143,8 @@ textarea {
     color: var(--accent);
     border: 1px solid var(--bg-light);
     border-radius: var(--radius-xs);
-    padding: 4px 10px;
-    margin: 6px;
+    padding: var(--space-sm) var(--space-md);
+    margin: var(--space-xs);
     transition: all 0.2s ease;
 
     box-sizing: border-box;
