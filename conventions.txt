@@ -1,0 +1,79 @@
+------------------------------------------------------------
+🐍 PYTHON COMMENT STYLING
+------------------------------------------------------------
+
+1. HEADER
+# ============================================================
+# ALL-CAPS HEADER
+# ============================================================
+
+Guidelines:
+- Used for major file sections (# DATABASE HELPERS, # DASHBOARD VIEWS, etc.)
+- Exactly 59 '=' characters top and bottom
+- Keep header in ALL CAPS
+- Separate visually distinct parts of the module
+
+------------------------------------------------------------
+2. SUB-HEADER
+# ------------------- ALL-CAPS SUB-HEADER -------------------
+
+Guidelines:
+- Used for subsections within a section (e.g., specific feature logic)
+- Exactly 51 '-' characters total (~20 each side)
+- Keep text ALL CAPS
+- Maintain consistent horizontal alignment
+
+------------------------------------------------------------
+3. INLINE COMMENT
+result = compute_rate()  # Title Case and concise
+
+Guidelines:
+- Two spaces before '#'
+- Use Title Case
+- Keep brief and meaningful (avoid restating obvious logic)
+
+------------------------------------------------------------
+⚡ JAVASCRIPT COMMENT STYLING
+------------------------------------------------------------
+
+1. HEADER
+// ============================================================
+// ALL-CAPS HEADER
+// ============================================================
+
+Guidelines:
+- Used for major module sections (// EVENT HANDLERS, // API FUNCTIONS, etc.)
+- Matches Python header format (59 '=' for symmetry)
+- Write in ALL CAPS
+
+------------------------------------------------------------
+2. SUB-HEADER
+// ------------------- ALL-CAPS SUB-HEADER -------------------
+
+Guidelines:
+- Used for subsections inside larger modules
+- Matches Python style (51 '-')
+- Keep ALL CAPS text centered
+
+------------------------------------------------------------
+3. INLINE COMMENT
+const limit = 50; // Title Case and concise
+
+Guidelines:
+- One space after '//'
+- Use Title Case
+- Keep short and descriptive; avoid restating variable names
+
+------------------------------------------------------------
+4. BLOCK / DOC COMMENT
+/**
+ * Fetch quote data for a given ticker.
+ * @param {string} ticker - Stock symbol to fetch.
+ * @returns {Promise<object>} Quote data object.
+ */
+async function fetchQuote(ticker) { ... }
+
+Guidelines:
+- Use JSDoc (/** ... */) for documenting functions
+- Maintain consistent indentation (1 space after '*')
+- Keep concise, professional, and action-oriented tone
