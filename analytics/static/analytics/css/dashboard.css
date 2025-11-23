@@ -66,7 +66,7 @@
 
 .watchlist-options input:hover {
     background-color: var(--accent);
-    color: var(--text-inverted);
+    color: var(--text-inverted) !important;
 }
 
 .active-button {

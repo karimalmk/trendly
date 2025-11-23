@@ -1,0 +1,387 @@
+/* ===================================
+   BLINKING TEXT
+=================================== */
+.blinking-text {
+    margin-top: 16px;
+    animation: blink 4s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    20%,
+    80%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ===================================
+   PAGE SETTINGS
+=================================== */
+.single-page {
+    display: none;
+    padding: 0px 16px;
+    position: relative;
+}
+
+/* Animation classes */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
+}
+
+body.fade-in {
+    animation: fadeIn 0.1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===================================
+   OVERLAYS
+=================================== */
+.overlay {
+    position: fixed;
+    background: var(--bg-dark);
+    border: 1px solid var(--border-light);
+    border-radius: 2px;
+    min-width: 150px;
+    display: none;
+    z-index: 100;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overlay button,
+.overlay input {
+    margin: 0;
+    width: 100%;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+#overlay-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(var(--bg-shadow), 0.67);
+    z-index: 90;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+#overlay-backdrop.active {
+    display: block;
+    opacity: 1;
+}
+
+/* ===================================
+   TEXT SELECTION & INTERACTION
+=================================== */
+.noselect {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.error {
+    color: var(--error);
+    padding: 8px;
+}
+
+.success {
+    color: var(--accent);
+}
+
+/* ===================================
+   CONTAINER STYLES
+=================================== */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 12px 16px;
+}
+
+.navbar,
+.settings {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.navbar {
+    gap: 24px;
+}
+
+.settings {
+    gap: 16px;
+}
+
+.navbar nav {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    gap: 12px;
+}
+
+/* --- Brand Section --- */
+.navbar-container .brand h1 {
+    margin: 0;
+}
+
+.navbar-container .brand a {
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+/* --- Tabs Section --- */
+.navbar-container .tabs a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+}
+
+.navbar-container .tabs a:hover {
+    color: var(--accent-hover);
+}
+
+/* ===================================
+   GRID SYSTEM
+=================================== */
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+[class^="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- 12-column layout spans --- */
+.col-1 {
+    grid-column: span 1;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-5 {
+    grid-column: span 5;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-7 {
+    grid-column: span 7;
+}
+
+.col-8 {
+    grid-column: span 8;
+}
+
+.col-9 {
+    grid-column: span 9;
+}
+
+.col-10 {
+    grid-column: span 10;
+}
+
+.col-11 {
+    grid-column: span 11;
+}
+
+.col-12 {
+    grid-column: span 12;
+}
+
+/* ===================================
+   UTILITY CLASSES
+=================================== */
+
+.sidebar {
+    padding: 32px 16px 0px 16px;
+}
+
+/* Card style for grouping elements */
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Allow wrapping of child elements */
+    background: var(--bg-light);
+    border-radius: 6px;
+    padding: 8px 16px;
+    box-shadow: 0 1px 6px rgba(var(--bg-shadow), 0.06);
+    margin: 8px;
+    overflow: hidden;
+}
+
+.card table {
+    width: 50%;
+}
+
+.card th,
+.card td {
+    padding: 4px 8px !important;
+    font-size: 1rem !important;
+}
+
+.card .col-1,
+.card .col-2,
+.card .col-3,
+.card .col-4,
+.card .col-5,
+.card .col-6,
+.card .col-7,
+.card .col-8,
+.card .col-9,
+.card .col-10,
+.card .col-11,
+.card .col-12 {
+    padding: 0 !important;
+}
+
+/* Pill style for tags or labels */
+.pill {
+    width: auto;
+    padding: 8px 12px;
+    margin: 4px var(--space-xxs);
+    border: 1px solid var(--border-light);
+    border-radius: 999px;
+    color: var(--text-subtle);
+    background: var(--bg-mid);
+}
+
+/* Scrollbox for overflow content */
+.scrollbox {
+    max-height: 140px;
+    overflow: auto;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 8px;
+    background: var(--bg-mid);
+}
+
+/* Keyboard key style */
+.kbd {
+    border: 1px solid var(--border-light);
+    background: var(--bg-mid);
+    padding: var(--space-xxs) 8px;
+    border-radius: 6px;
+    color: var(--text-subtle);
+}
+
+/* Stack layout for grouping elements vertically */
+.stack {
+    padding: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Pop-up style for modal dialogs */
+.pop-up {
+    padding: 16px 24px;
+    align-items: center;
+}
+
+/* ===================================
+   BUTTON STYLES
+=================================== */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.cta {
+    background: var(--accent) !important;
+    color: var(--text-inverted) !important;
+    font-weight: 600;
+    margin: 12px 4px;
+    padding: 6px 12px;
+    transition: background 0.2s ease;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cta:hover {
+    background: var(--accent-hover) !important;
+}
+
+.active-button {
+    color: var(--text-subtle) !important;
+}
+
+.hard-button {
+    border-radius: 0px !important;
+}
+
+.expand {
+    display: none;
+}
+
+/* Small button style */
+.small-button {
+    padding: 2px 4px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    color: var(--text-subtle);
+    transition: background 0.2s ease;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.small-button:hover,
+.small-button:focus {
+    background: var(--btn-hover);
+    color: var(--text-subtle);
+}
+
+/* ===================================
+   MISCELLANEOUS
+=================================== */
+.bold {
+    border-bottom: 8px solid var(--accent);
+}
+
+.spacer {
+    flex: 1;
+}

@@ -1,5 +1,5 @@
-import { formatUSD, formatPercent, formatIntegerComma } from "./helpers.js";
-import { handleOverlay, setCoordinates } from "../../../../../shared_static/js/navigation.js";
+import { formatUSD, formatPercent, formatIntegerComma } from "./formatting.js";
+import { handleOverlay, setCoordinates } from "../../../../static/js/helpers.js";
 import {
     fetchWatchlists, fetchWatchlistData, fetchCreateWatchlist, fetchDeleteWatchlist, fetchRenameWatchlist,
     fetchAddStockToWatchlist, fetchRemoveStockFromWatchlist
@@ -14,7 +14,7 @@ function highlightButton(activeButton, previousButton) {
         activeButton.classList.add("active-button");
         previousButton = activeButton;
     } else if (activeButton !== previousButton) {
-        previousButton.classList.remove("active-button");
+    previousButton.classList.remove("active-button");
         activeButton.classList.add("active-button");
         previousButton = activeButton;
     }
