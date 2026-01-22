@@ -63,6 +63,7 @@ main {
     flex: 1;
     background-color: var(--bg-mid);
     padding: 16px 16px 0px 16px;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
 }
 
 footer {

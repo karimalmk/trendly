@@ -4,15 +4,13 @@ Trendly is a lightweight, modular **portfolio analytics and watchlist platform**
 
 ## 🔎 Overview
 
-Trendly focuses on **clarity**, **modularity**, and **maintainability**.
-
-### ⭐ Key Features
+### Key Features
 - 📑 Watchlist management — create, edit, reorder, delete  
 - 📈 Ticker ingestion pipeline using live yFinance queries (local caching optional)  
 - 🌍 Global ticker normalization (all values converted to USD)  
 - 📱 Responsive UI with minimal, fast-loading templates  
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Backend:** Django, Django ORM  
 - **Database:** SQLite (development) — compatible with PostgreSQL in production  
 - **Frontend:** HTML templates, modular ES6 JavaScript, shared design system  

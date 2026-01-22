@@ -2,7 +2,7 @@
    BLINKING TEXT
 =================================== */
 .blinking-text {
-    margin-top: 16px;
+    margin: 16px 0px;
     animation: blink 4s infinite;
 }
 
