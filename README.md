@@ -12,9 +12,9 @@ Trendly is a lightweight, modular **portfolio analytics and watchlist platform**
 
 ## Tech Stack
 - **Backend:** Django, Django ORM  
-- **Database:** SQLite (development) — compatible with PostgreSQL in production  
-- **Frontend:** HTML templates, modular ES6 JavaScript, shared design system  
-- **Environment:** Python 3.11+  
+- **Database:** SQLite
+- **Frontend:** HTML templates, JavaScript, CSS
+- **Environment:** Python 3.11+
 
 ## 🚀 Installation
 

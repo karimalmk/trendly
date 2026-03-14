@@ -121,11 +121,7 @@ STATIC_URL = 'static/'
 # This points Django to your global static folder (outside any single app)
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    BASE_DIR.parent / "shared_static", # For global stylesheets shared across multiple projects
 ]
-
-# In production, Django collects everything here
-STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
